@@ -1,83 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 body{
+    min-height: 100vh;
     background-color: rgb(71, 59, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+.calculadora{
     background-color: rgb(114, 67, 121);
-    border: 1px solid white;
-    width: 40%;
+    border: 2px solid white;
+    width: 350px;
+    max-width: 100%;
     height: 80vh;
+    padding: 1.5rem;
+    border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "resultado resultado restultado resultado"
-    "btn-c btn-flecha btn-dividir btn-multiplicar"
-    "btn-7 btn-8 btn-9 btn-menos"
-    "btn-4 btn-5 btn-6 btn-mas"
-    "btn-1 btn-2 btn-3 bnt-0"
-    "btn-0 btn-coma btn-igual btn-igual";
-}
-input{
-    background-color:red;
-    width: 15vh;
-    height: 8vh;
+    gap: .5rem;
 }
 .resultado{
     background-color: rgba(220, 94, 240, 0.2);
-    height: 35%;
-    width: 100%;
-    grid-area: resultado;
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
 }
-#btn-c{
-    grid-area: btn-c; 
+.btn{
+    background-color: rgb(71, 59, 78);
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: .5rem;
 }
-#btn-flecha{
-    grid-area: btn-flecha;
-}
-#btn-dividir{
-    grid-area: btn-dividir;
-}
-#btn-multiplicar{
-    grid-area: btn-multiplicar;
-}
-#btn-7{
-    grid-area: btn-7;
-}
-#btn-8{
-   grid-area: btn-8; 
-}
-#btn-9{
-    grid-area: btn-9;
-}
-#btn-menos{
-    grid-area: btn-menos;
-}
-#btn-4{
-    grid-area: btn-4;
-}
-#btn-5{
-    grid-area: btn-5;
-}
-#btn-6{
-    grid-area: btn-6;
-}
-#btn-mas{
-    grid-area: btn-mas;
-}
-#btn-1{
-    grid-area: btn-1;
-}
-#btn-2{
-    grid-area: btn-2;
-}
-#btn-3{
-    grid-area: btn-3;
+.btn:hover{
+    background-color: rgba(220, 94, 240, 0.2);
+
 }
 #btn-0{
-    grid-area: btn-0;
-}
-#btn-coma{
-    grid-area: btn-coma;
+    grid-column: span 2;
+
 }
 #btn-igual{
-    grid-area: btn-igual;
+    background-color: rgb(243, 125, 46);
+    grid-row: span 2;
+}
+#btn-igual:hover{
+    background-color: rgb(167, 90, 39);
 }
